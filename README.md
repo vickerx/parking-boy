@@ -94,3 +94,51 @@ tasking four：super parking policy
 5.given：给定两个空车率相等的停车场  
   when：获取停车场  
   then：获取第一个停车场    
+
+tasking five: parking manager
+
+1.given: 给定一辆车，有停车位的graduate小弟  
+  when: 用户来停车
+  then: 1.经理选择一个有空停车场的小弟  
+        2.小弟去停车
+        3.得到停车票  
+        
+2.given: 给定一辆车，一个graduate，一个smart的小弟，graduate车位已满  
+  when: 用户来停车
+  then: 1.经理选择smart的小弟去停车  
+        2.小弟去停车
+        3.得到停车票  
+        
+        
+3.given: 给定一辆车，一个graduate，所有小弟车位已满，经理的停车场有空位  
+  when: 用户来停车
+  then: 1.经理无法选择小弟去停车  
+        2.经理自己去停车
+        3.得到停车票    
+4.given: 给定一辆车，一个graduate,所有小弟已满，经理的停车场也满了
+  when: 用户来停车
+  then: 1.经理无法选择小弟去停车  
+        3.经理无法去停车
+                     
+5.given: 给定一个有效停车票  
+  when: 用户来取车
+  then: 1.经理选择小弟  
+        2.小弟去取车  
+        3.得到车  
+             
+6.given: 给定一个有效停车票  
+  when: 用户来去了两次车
+  then: 1.经理选择小弟  
+        2.小弟去取车  
+        3.第一次取到车
+        4.第二次取车失败          
+             
+7.given: 给定一个无效停车票  
+  when: 用户来取车
+  then: 1.经理选择小弟  
+        2.小弟去取车  
+        3.小弟取不到车
+        4.经理也取不到车
+
+        
+    

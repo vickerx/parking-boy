@@ -1,6 +1,8 @@
 package com.aepb;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 
 public class ParkingLot {
 
@@ -46,6 +48,10 @@ public class ParkingLot {
     }
 
     public double getSlotRate() {
-        return ((double)slot)/capacity;
+        return ((double) slot) / capacity;
+    }
+
+    public boolean hasCar(Ticket ticket) {
+        return null != parkingLot.get(ticket);
     }
 }
