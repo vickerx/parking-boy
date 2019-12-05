@@ -18,7 +18,7 @@ tasking one: parking lot
    
    
    
-tasking two: parking boy  
+tasking two: parking boy 
 
 1.Given： 给定一辆车，和一个有空位的停车场
   When：小弟去停车
@@ -48,68 +48,49 @@ tasking two: parking boy
   When：小弟拿停车取车    
   Then：小弟取车失败  
   
-  
-  
- tasking three: smart parking 
- 
-1.given: 给定一辆车，一个有空位停车场  
-  when：小弟将车停在停车场的空位上  
-  then：车停好了，得到小弟给的停车票
+
+tasking three: smart parking policy
+
+
+1.given: 给定一个有空位的停车场  
+  when：获取停车场  
+  then：得到一个停车场
    
-2.given：给定一辆车，一个没有空位的停车场  
-  when：小弟来停车  
-  then： 没有空位，无法停车  
+2.given：给定一个满的停车场    
+  when：获取停车场    
+  then：获取停车场失败    
 
-3.given：给定一辆车，两个空位不等的停车场  
-  when：小弟来停车  
-  then：小弟选择一个空车位多的停车场，停好车，得到小弟的停车票  
-
-4.given：给定一辆车，两个空车位相等的停车场  
-  when：小弟来停车，  
-  then：小弟选择第一个停车场，停好车，得到小弟的停车票  
-  
-5.given：给定一个停车票   
-  when：小弟拿停车票来取车  
-  then：小弟取好车  
-
-6.given：给定一个非法停车票  
-  when：小弟拿停车票来取车  
-  then：小弟取不到车    
-
-7.given：给定一个停车票  
-  when：小弟拿停车票来取了两次车  
-  then：小弟第一次取车成功，第二次驱车失败  
-  
-tasking four：super parking 
-
-1.given: 给定一辆车，一个有空位停车场  
-  when：小弟将车停在停车场的空位上  
-  then：车停好了，得到小弟给的停车票
+3.given：给定两个满的停车场  
+  when：获取停车场  
+  then：获取停车场失败 
    
-2.given：给定一辆车，一个没有空位的停车场  
-  when：小弟来停车  
-  then： 没有空位，无法停车  
+4.given：给定两个空位不等的停车场  
+  when：获取停车场  
+  then：获取空位最多的停车场  
 
-3.given：给定一辆车，两个空置率不等的停车场  
-  when：小弟来停车  
-  then：小弟选择一个空置率高的停车场，停好车，得到小弟的停车票  
+5.given：给定两个空车位相等的停车场  
+  when：获取停车场  
+  then：获取第一个停车场  
 
-4.given：给定一辆车，两个空置率位相等的停车场  
-  when：小弟来停车，  
-  then：小弟选择第一个停车场，停好车，得到小弟的停车票  
+   
+tasking four：super parking policy
   
-5.given：给定一辆车，两个满的停车场
-  when：小弟来停车  
-  then：停车失败 
+1.given: 给定一个有空位的停车场  
+  when：获取停车场  
+  then：得到一个停车场
+   
+2.given：给定一个满的停车场    
+  when：获取停车场    
+  then：获取停车场失败    
+
+3.given：给定两个满的停车场  
+  when：获取停车场  
+  then：获取停车场失败 
   
-6.given：给定一个有效的停车票   
-  when：小弟拿停车票来取车  
-  then：小弟取好车  
-
-7.given：给定一个非法停车票  
-  when：小弟拿停车票来取车  
-  then：小弟取不到车    
-
-8.given：给定一个有效的停车票  
-  when：小弟拿停车票来取了两次车  
-  then：小弟第一次取车成功，第二次取车失败  
+4.given：给定两个空车率不等的停车场  
+  when：获取停车场  
+  then：获取空车率高的停车场  
+  
+5.given：给定两个空车率相等的停车场  
+  when：获取停车场  
+  then：获取第一个停车场    
