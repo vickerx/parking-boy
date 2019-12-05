@@ -1,4 +1,4 @@
-tasking one:
+tasking one: parking lot  
 
 1. given a car   
    when parking car in space slot lot  
@@ -18,32 +18,39 @@ tasking one:
    
    
    
-tasking two:
+tasking two: parking boy  
 
-1.Given： 给定一辆车  
-  When：小弟找了一个还有空位停车场，将车停在了空位上
-  Then：车停好了，得到了小弟给的停车票
+1.Given： 给定一辆车，和一个有空位的停车场
+  When：小弟去停车
+  Then：小弟找了一个空位，停好车，得到了小弟给的停车票
 
-2.Given: 给定一辆车，第一个停车场满了  
-  When：小弟找老板要了个空停车场，将车停在了空位上  
-  Then：车停好了，得到了小弟给的停车票；停车票记录车所在停车场及空位  
+2.Given: 给定一辆车，和两个停车场，其中第一个停车场满了  
+  When：小弟去停车  
+  Then：小弟将车停在了第二个停车场的空位上，车停好了，得到了小弟给的停车票  
 
-3.Given： 给定一辆车，第一个停车场有空位了  
-  When：小弟将车停在第一个停车场的空位
-  Then： 车停好了，得到了小弟给的停车票
+3.Given：给定一辆车，两个停车场，其中第一个停车场有空位  
+  When：小弟去停车  
+  Then：小弟将车停在第一个停车场的空位，得到了小弟给的停车票  
 
-4.Given： 给定一辆车，所有停车场都满了  
-  When：小弟找不到有空位的停车场，无法停车  
-  Then：
+4.Given：给定一辆车，所有停车场都满了  
+  When：小弟去停车  
+  Then：小弟找不到有空位的停车场，无法停车  
   
-5.Given： 给定一个停车票
-  When：小弟拿着停车票将车从停车场取出来
-  Then：
+5.Given：给定一个有效的停车票  
+  When：小弟拿停车票去取车  
+  Then：小弟取到车  
+
+6.Given：给定一个有效的停车票  
+  When：小弟拿停车票取车两次  
+  Then：小弟第一次取到车，第二次取车失败  
+
+7.Given：给定一个无效的停车票    
+  When：小弟拿停车取车    
+  Then：小弟取车失败  
   
   
   
-  
- tasking three:
+ tasking three: smart parking 
  
 1.given: 给定一辆车，一个有空位停车场  
   when：小弟将车停在停车场的空位上  
@@ -73,7 +80,7 @@ tasking two:
   when：小弟拿停车票来取了两次车  
   then：小弟第一次取车成功，第二次驱车失败  
   
-tasking four
+tasking four：super parking 
 
 1.given: 给定一辆车，一个有空位停车场  
   when：小弟将车停在停车场的空位上  
